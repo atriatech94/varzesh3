@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="msapplication-tap-highlight" content="no" />
+<!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+<!--<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0" />-->
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<link rel="stylesheet" type="text/css" href="css/index.css" />
+<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+<link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.min.css" />
+<link rel="stylesheet" type="text/css" href="video/video-js.css" />
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<link rel="stylesheet" type="text/css" href="css/swiper.min.css" />
+<title>Hello World</title>
+</head>
+<body>
+<div  class="_ezswipe" data-role="page" news="true" id="index">
+  <!-- Swiper -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <!--------------------------------------------Slide 1------------------------------------------------>  
+            <div class="swiper-slide" id="news">
+                <!-------------------------------------------------------------------------------------------->  
+               
+                  <div data-role="content"  class="content_scroll " news="true">
+                      <img class="loading_swdw" src="img/l3.GIF">
+                    <section  class="post_bl">
+                            <div class="setun1"></div>
+                            <div class="setun2"></div>
+                      </section><!--- end section news ----> 
+                      <img class="loading_img" src="img/loading.gif" >
+                  </div><!--- end content ----> 
+                <!-------------------------------------------------------------------------------------------->
+                    <div data-role="popup" id="popup1"  data-overlay-theme="a" data-theme="b"  class="ui-corner-all">
+                        <div data-role="header" class="news_head" data-position="inline" >
+                           <h1></h1>
+                           <a href="#" data-icon="back" id="menu_icon" data-rel="back" data-iconpos="notext" data-shadow="false" data-iconshadow="false" class="ui-nodisc-icon ui-btn-left" ></a>
+                      </div>
+                        <div  data-role="content" data-theme="b">
+                              <section class="blog_detail"></section>
+                        </div>
+                    </div>
+                <!-------------------------------------------------------------------------------------------->  
+              
+                <!--- end page ----> 
+            </div>
+            <!--------------------------------------------End Slide 1------------------------------------------------>  
+            <!--------------------------------------------Slide 2------------------------------------------------>  
+            <div class="swiper-slide" id="video">
+                <!-------------------------------------------------------------------------------------------->
+              
+                  <div data-role="content" >
+                    <div class="videolists">
+                        <img class="loading_swdw" src="img/l3.GIF">
+                        <div class="video_p1"></div>
+                         <div class="video_p2"></div>
+                        <div class="clear"></div>
+                      </div><!--end videolists--->
+                  </div>
+                    <!-------------------------------------------------------------------------------------------->
+                      <div data-role="popup" id="popupVideo" data-overlay-theme="b" data-theme="a" class="ui-corner-all">
+                          <a href="#" data-rel="back" class="ui-btn ui-btn-b ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right close_video">Close</a>
+                           <iframe id="video_frame" src=""></iframe>
+                        </div>
+                    <!-------------------------------------------------------------------------------------------->
+                
+                <!--- end page ----> 
+            </div> <!---end  swiper-slide --->
+            <!--------------------------------------------End Slide 2------------------------------------------------>
+            <!--------------------------------------------Slide 3------------------------------------------------>  
+            <div class="swiper-slide"  id="live">
+                <!-------------------------------------------------------------------------------------------->
+              
+                  <div data-role="content">
+                    <p>Article 3</p>
+                  </div>
+            </div> <!---end  swiper-slide --->
+            <!--------------------------------------------End Slide 3------------------------------------------------>  
+            <!--------------------------------------------Slide 4------------------------------------------------>  
+            <div class="swiper-slide">
+            <!-------------------------------------------------------------------------------------------->
+             
+                  <div data-role="content" id="last">
+                    <p>Article 4</p>
+                  </div>
+             </div> <!---end  swiper-slide --->
+            <!--------------------------------------------End Slide 4------------------------------------------------>  
+        </div>
+    </div>
+</div>
+    <!-- Swiper JS -->
+</body>
+</html>
+<script type="text/javascript" src="js/_ezswipe.js"></script>
+<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
+<script type="text/javascript" src="js/swiper.min.js"></script>
+<script type="text/javascript" src="video/video.js"></script>
+<script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+
+<script type="text/javascript">
+   app.initialize();
+   // videojs.options.flash.swf = "video-js.swf";
+    var swiper = new Swiper('.swiper-container');
+    // Later add callback
+    swiper.on('onSlideChangeEnd', function (event) {
+            //$('.swiper-slide-active div[data-role="page"]').attr('id');
+
+             var active_page =  $('.swiper-slide-active').attr('id');
+
+
+        return false;
+    });
+</script>

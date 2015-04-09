@@ -1,0 +1,153 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Swiper demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+    <!--<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0" />-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.min.css" />
+    <link rel="stylesheet" type="text/css" href="video/video-js.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="css/swiper.min.css">
+
+    <!-- Demo styles -->
+
+</head>
+<body>
+    <!-- Swiper -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+<!------============================================================------->              
+            <div class="swiper-slide" pages="newss">
+            <!---------------------------------------------------------->
+
+               
+                  <div data-role="content"  class="content_scroll " news="true">
+                      <img class="loading_swdw" src="img/l3.GIF">
+                    <section  class="post_bl">
+                            <div class="setun1"></div>
+                            <div class="setun2"></div>
+                      </section><!--- end section news ----> 
+                      <img class="loading_img" src="img/loading.gif" >
+                  </div><!--- end content ----> 
+                <!-------------------------------------------------------------------------------------------->
+                    <div data-role="popup" id="popup1"  data-overlay-theme="a" data-theme="b"  class="ui-corner-all">
+                        <div data-role="header" class="news_head" data-position="inline" >
+                           <h1></h1>
+                           <a href="#" data-icon="back" id="menu_icon" data-rel="back" data-iconpos="notext" data-shadow="false" data-iconshadow="false" class="ui-nodisc-icon ui-btn-right" ></a>
+                      </div>
+                        <div  data-role="content" data-theme="b">
+                              <section class="blog_detail"></section>
+                        </div>
+                    </div>
+                <!-------------------------------------------------------------------------------------------->  
+              
+                <!-------------------------- end page -------------------------------> 
+                
+            </div>
+<!------============================================================------->       
+            <div class="swiper-slide" pages="video">
+                <!-------------------------------------------------------------------------------------------->
+              <div class="videolists">
+                        <img class="loading_swdw" src="img/l3.GIF">
+                        <div class="video_p1"></div>
+                         <div class="video_p2"></div>
+                        <div class="clear"></div>
+                      </div><!--end videolists--->
+                 
+                    <!-------------------------------------------------------------------------------------------->
+                      <div data-role="popup" id="popupVideo" data-overlay-theme="b" data-theme="a" class="ui-corner-all">
+                          <a href="#" data-rel="back" class="ui-btn ui-btn-b ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right close_video">Close</a>
+                           <iframe id="video_frame" src=""></iframe>
+                        </div>
+                    <!-------------------------------------------------------------------------------------------->
+                
+                <!--- end page ----> 
+            </div>
+<!------============================================================------->       
+            <div class="swiper-slide" pages="score">
+                <div class="score_list">
+                    <div class="live_score" id="live_score2"></div>
+                </div>
+            </div>
+<!------============================================================------->       
+            <div class="swiper-slide" pages="menu">
+                    <div class="score_list">
+                        <ul class="menu_other">
+                            <li class="table_last" ><img src="img/score.png"><a data-rel="popup" data-position-to="window"  data-inline="true" data-transition="pop" href="#menu_detail">نتایج بازی های روز گذشته</a></li>
+                            <li class="iran_lig" id="IranBartar"><img src="img/Iran_flat.png"><a  data-rel="popup" data-position-to="window"  data-inline="true" data-transition="pop" href="#menu_detail" >لیگ برتر ایران</a></li>
+                            <li class="spain_lig" id="Spain"><img src="img/Spain_flat.png"><a data-rel="popup" data-position-to="window"  data-inline="true" data-transition="pop" href="#menu_detail">لینگ برتر اسپانیا</a></li>
+                            <li class="german_lig" id="Germany"><img src="img/Germany_flat.png"><a  data-rel="popup" data-position-to="window"  data-inline="true" data-transition="pop" href="#menu_detail">لیگ برتر آلمان</a></li>
+                            <li class="uk_lig" id="England"><img src="img/United-Kingdom_flat.png"><a  data-rel="popup" data-position-to="window"  data-inline="true" data-transition="pop" href="#menu_detail">لیگ برتر انگلستان</a></li>
+                            <li class="italy_lig" id="Italy"><img src="img/Italy_flat.png"><a  data-rel="popup" data-position-to="window"  data-inline="true" data-transition="pop" href="#menu_detail">لیگ برتر ایتالیا</a></li>
+                            <li class="french_lig" id="France"><img src="img/France_flat.png"><a  data-rel="popup" data-position-to="window"  data-inline="true" data-transition="pop" href="#menu_detail">لیگ برتر فرانسه</a></li>
+                        </ul>
+                    </div><!-- end score_list -->
+            </div>
+            
+             <!-------------------------------------------------------------------------------------------->
+                    <div data-role="popup" id="menu_detail"  data-overlay-theme="a" data-theme="b"  class="ui-corner-all">
+                        <div data-role="header" class="news_head" data-position="inline" >
+                           <h1></h1>
+                           <a href="#" data-icon="back" id="menu_icon" data-rel="back" data-iconpos="notext" data-shadow="false" data-iconshadow="false" class="ui-nodisc-icon ui-btn-right" ></a>
+                      </div>
+                        <div data-role="content" data-theme="b">
+                              <section class="lig_table"><div class="detail"></div></section>
+                              <div class="live_score" id="live_score"></div>
+                        </div>
+                    </div>
+                <!-------------------------------------------------------------------------------------------->  
+            
+        </div>
+        <!-- Add Pagination -->
+    </div>
+<!-------------------------------------------------------------------------------------------->
+<div class="footer_menu_fix">
+    <ul>
+        <li pages="index" class="active"><a href="#index"><img src="img/news.png"></a></li>
+        <li pages="video"><a href="#video"><img src="img/video.png"></a></li>
+        <li class="img_center"><img src="img/varzesh3-logo.png" ></li>
+        <li pages="score"><a href="#score"><img src="img/live_score.png"></a></li>
+        <li pages="menu"><a href="#menu"><img src="img/menu.png"></a></li>
+    </ul>
+</div>
+<!--- end footer_fix ----> 
+<!------============================================================------->    
+    <!-- Swiper JS -->
+    <script type="text/javascript" src="js/_ezswipe.js"></script>
+    <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
+    <script type="text/javascript" src="js/swiper.min.js"></script>
+    <script type="text/javascript" src="video/video.js"></script>
+   <!-- <script type="text/javascript" src="cordova.js"></script> -->
+    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script src="js/swiper.min.js"></script>
+
+    <!-- Initialize Swiper -->
+<script type="text/javascript">
+   app.initialize();
+   // videojs.options.flash.swf = "video-js.swf";
+    var swiper = new Swiper('.swiper-container');
+    // Later add callback
+    swiper.on('onSlideChangeEnd', function (event) {
+            //$('.swiper-slide-active div[data-role="page"]').attr('id');
+
+             var active_page =  $('.swiper-slide-active').attr('pages');
+             $('*.footer_menu_fix ul li').removeClass('active');
+             $('.footer_menu_fix ul li[pages="'+active_page+'"]').addClass('active');
+
+        return false;
+    });
+</script>
+</body>
+</html>
